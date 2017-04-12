@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/newsAdapterRootLayout"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/shrinkedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="118dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp">
+                <ImageView
+                    android:id="@+id/newsAdapterImageView"
+                    android:layout_width="118dp"
+                    android:layout_height="70dp"
+                    android:background="#aaaaaa"/>
+
+                <ImageView
+                    android:id="@+id/arrowDownImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:tint="@color/white"
+                    android:background="@color/black"
+                    android:src="@drawable/arrow_down"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+                <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                    android:id="@+id/newsAdapterTextview01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Texto01"
+                    app:customTextSize="16sp"
+                    android:textColor="@color/colorTextView01"
+                    app:dinFamily="medium"/>
+
+                <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                    android:id="@+id/newsAdapterTextview02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Texto01"
+                    android:layout_gravity="bottom"
+                    app:customTextSize="16sp"
+                    android:textColor="@color/colorTextView02"
+                    app:dinFamily="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/collapsedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+
+
+            <RelativeLayout
+                android:id="@+id/gradienteLabelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_gradiente">
+
+                <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                    android:id="@+id/newsAdapterTextview04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    app:customTextSize="14sp"
+                    app:dinFamily="bold"
+                    android:textColor="@color/white"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                    android:id="@+id/newsAdapterTextview03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    app:customTextSize="16sp"
+                    app:dinFamily="bold"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

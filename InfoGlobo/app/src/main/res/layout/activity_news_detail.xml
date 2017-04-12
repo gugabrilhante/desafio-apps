@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    tools:context="gustavo.brilhante.infoglobo.activity.NewsDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                android:id="@+id/tituloTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Texto01"
+                android:layout_gravity="bottom"
+                app:customTextSize="30sp"
+                android:textColor="@color/colorTextView02"
+                app:dinFamily="bold"/>
+
+            <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                android:id="@+id/subtituleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Texto01"
+                android:layout_gravity="bottom"
+                app:customTextSize="26sp"
+                android:textColor="@color/colorTextView02"
+                app:dinFamily="light"/>
+
+            <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                android:id="@+id/autorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="POR O GLOBO\nDATA"
+                android:layout_gravity="bottom"
+                app:customTextSize="18sp"
+                android:textColor="@color/colorTextView01"
+                app:dinFamily="light"/>
+
+
+
+            <RelativeLayout
+                android:id="@+id/imageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="fitXY"/>
+
+                <com.github.rahatarmanahmed.cpv.CircularProgressView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/progressView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    app:cpv_color="@color/colorPrimary"
+                    app:cpv_animAutostart="true"
+                    app:cpv_indeterminate="true" />
+
+
+                <RelativeLayout
+                    android:id="@+id/gradienteLabelLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/shape_gradiente">
+
+
+                    <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                        android:id="@+id/descricaoTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="left"
+                        app:customTextSize="13sp"
+                        app:dinFamily="medium"
+                        android:textColor="@color/white"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+            <gustavo.brilhante.infoglobo.layout.InfoGloboTextView
+                android:id="@+id/corpoNoticiaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                android:layout_gravity="bottom"
+                app:customTextSize="14sp"
+                android:textColor="@color/colorTextView02"
+                app:dinFamily="medium"/>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</LinearLayout>
